@@ -1,0 +1,26 @@
+https://aspnetcoremaster.com/connectionstring/2019/02/27/cadenas-de-conexion-csharp.html
+https://www.kyocode.com/2018/10/consultar-sql-server-desde-asp-net-c/
+https://learn.microsoft.com/es-es/aspnet/web-pages/overview/getting-started/introducing-aspnet-web-pages-2/updating-data
+https://es.stackoverflow.com/questions/211411/update-sql-server-por-medio-de-visual-studio-asp-net-web-forms
+https://learn.microsoft.com/es-es/dotnet/api/system.data.sqlclient.sqlparametercollection.addwithvalue?view=netframework-4.7.2
+https://www.tutorialesprogramacionya.com/aspnetya/detalleconcepto.php?codigo=67
+
+ protected void gvusuarios_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                int edad;
+                edad = (int)DataBinder.Eval(e.Row.DataItem, "Edad");
+                if (edad > 24)
+                {
+                    //String valor = this.GridView1.CurrentRow.Cells[0];
+                  //  e.Row.(2).BackColor = System.Drawing.Color.Red;
+                    e.Row.ForeColor = System.Drawing.Color.Red;
+                    //e.Row.BackColor = System.Drawing.Color.Yellow;
+                    e.Row.Font.Bold = true;
+                }
+
+            }
+
+        }
